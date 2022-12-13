@@ -1,14 +1,18 @@
-import Button from "react-bootstrap/Button";
+import React from 'react';
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import ReactDOM from "react-dom/client";
+import router from "./Routes/Routes";
+import './assets/styles/styles.css'
 
 function App() {
+  
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <Button as="a" variant="primary">
-        Button as link
-      </Button>
-    </div>
+    ReactDOM.createRoot(document.getElementById("root")).render(
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    )
   );
 }
 
